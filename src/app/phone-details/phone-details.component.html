@@ -6,7 +6,7 @@
 
 <div *ngIf="phone">
   <div class="phone-thumbnail">
-    <img height="300" [src]="phone.image">
+    <img height="200px" [src]="phone.image">
   </div>
 
  <div class="phone-info">
@@ -24,7 +24,7 @@
     </div>
 
    <h4> Danger! </h4>
-    <button (click)="deletePhone()">
+    <button (click)="deletePhone(id)">
       Delete This Phone
     </button>
   </div>

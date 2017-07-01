@@ -10,7 +10,7 @@ import { PhoneService } from '../phone.service';
 })
 export class PhoneDetailsComponent implements OnInit {
 
-  phone: Object;
+  phone: any;
 
   errorMessage: String = '';
 
@@ -36,9 +36,8 @@ export class PhoneDetailsComponent implements OnInit {
   }
 
   deletePhone() {
-    if (!window.confirm('Are you sure?') ) {
-      return;
+    if (window.confirm('Are you sure?')) {
+      this.myPhoneService.remove(this.phone._id)
     }
   }
-
 }

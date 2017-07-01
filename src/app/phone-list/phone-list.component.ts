@@ -14,7 +14,7 @@ export class PhoneListComponent implements OnInit {
 
   ngOnInit() {
     this.myPhoneService.getList()
-    .then((phoneList) => {
+    .then((phonesList) => {
       this.phones = phonesList;
     })
     .catch((err) => {
